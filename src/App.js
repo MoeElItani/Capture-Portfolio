@@ -1,13 +1,15 @@
+// Global Style
+import GlobalStyle from './components/GlobalStytle'
 // Imports
-import AboutUs from './pages/AboutUs';
-
+import AboutUs from './pages/AboutUs'
 
 function App() {
-  return (
-    <div className="App">
-      <AboutUs />
-    </div>
-  );
+   return (
+      <div className='App'>
+         <GlobalStyle />
+         <AboutUs />
+      </div>
+   )
 }
 
-export default App;
+export default App
