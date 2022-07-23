@@ -3,8 +3,8 @@ import GlobalStyle from './components/GlobalStytle'
 // Imports
 import Nav from './components/Nav'
 import AboutUs from './pages/AboutUs'
-import OurWork from './components/OurWork'
-import ContactUs from './components/ContactUs'
+import OurWork from './pages/OurWork'
+import ContactUs from './pages/ContactUs'
 // Router
 import { Routes, Route } from 'react-router-dom'
 
