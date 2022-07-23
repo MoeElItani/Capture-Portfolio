@@ -7,7 +7,7 @@ import teamwork from '../img/teamwork.svg'
 import home2 from '../img/home2.png'
 // Styled
 import styled from 'styled-components'
-import { About, Description, Hide, Image } from './styles'
+import { About, Description, Image } from './styles'
 
 const ServicesSection = () => {
    return (
@@ -72,7 +72,7 @@ const Card = styled.div`
    .icon {
       display: flex;
       align-items: center;
-      h3{
+      h3 {
          margin-left: 1rem;
          background: #fff;
          color: #000;
