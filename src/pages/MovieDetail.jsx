@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { useLocation } from 'react-router-dom'
 import { MovieState } from '../movieState'
+// Framer Motion
+import { motion } from 'framer-motion'
+import { pageAnimation } from '../Animation'
 
 const MovieDetail = () => {
    const location = useLocation()
@@ -18,11 +21,14 @@ const MovieDetail = () => {
       setMovie(currentMovie[0])
    }, [movies, url])
 
-   // Video #11 Stopped @20:35
-
    console.log(movie)
    return (
-      <>
+      <motion.div
+         variants={pageAnimation}
+         initial='hidden'
+         animate='show'
+         exit={pageAnimation.exit}
+      >
          {movie && (
             <Details>
                <HeadLine>
@@ -46,7 +52,7 @@ const MovieDetail = () => {
                </ImageDisplay>
             </Details>
          )}
-      </>
+      </motion.div>
    )
 }
 
@@ -93,7 +99,7 @@ const AwardStyle = styled.div`
 `
 const ImageDisplay = styled.div`
    min-height: 50vh;
-   img{
+   img {
       width: 100%;
       height: 100vh;
       object-fit: cover;
