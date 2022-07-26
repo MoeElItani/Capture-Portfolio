@@ -21,22 +21,18 @@ const MovieDetail = () => {
       setMovie(currentMovie[0])
    }, [movies, url])
 
-   console.log(movie)
    return (
-      <motion.div
-         variants={pageAnimation}
-         initial='hidden'
-         animate='show'
-         exit={pageAnimation.exit}
-      >
+      <>
          {movie && (
-            <Details>
+            <Details
+               variants={pageAnimation}
+               initial='hidden'
+               animate='show'
+               exit='exit'
+            >
                <HeadLine>
                   <h2>{movie.title}</h2>
-                  <img
-                     src={movie.mainImg}
-                     alt={`${movie.title} movie`}
-                  />
+                  <img src={movie.mainImg} alt='movie' />
                </HeadLine>
                <Awards>
                   {movie.awards.map((award) => (
@@ -52,16 +48,15 @@ const MovieDetail = () => {
                </ImageDisplay>
             </Details>
          )}
-      </motion.div>
+      </>
    )
 }
-
-const Details = styled.div`
-   color: #fff;
+const Details = styled(motion.div)`
+   color: white;
 `
 const HeadLine = styled.div`
    min-height: 90vh;
-   padding-top: 20rem;
+   padding-top: 20vh;
    position: relative;
    h2 {
       position: absolute;
@@ -78,9 +73,13 @@ const HeadLine = styled.div`
 const Awards = styled.div`
    min-height: 80vh;
    display: flex;
-   margin: 5rem 0;
+   margin: 5rem 10rem;
    align-items: center;
    justify-content: space-around;
+   @media (max-width: 1500px) {
+      display: block;
+      margin: 2rem 2rem;
+   }
 `
 const AwardStyle = styled.div`
    padding: 5rem;
@@ -88,13 +87,13 @@ const AwardStyle = styled.div`
       font-size: 2rem;
    }
    .line {
-      width: 75%;
+      width: 100%;
       background: #23d997;
       height: 0.5rem;
-      margin: 1rem 0;
+      margin: 1rem 0rem;
    }
    p {
-      padding: 2rem 0;
+      padding: 2rem 0rem;
    }
 `
 const ImageDisplay = styled.div`
@@ -106,11 +105,12 @@ const ImageDisplay = styled.div`
    }
 `
 
+//Award Component
 const Award = ({ title, description }) => {
    return (
       <AwardStyle>
          <h3>{title}</h3>
-         <div className='line' />
+         <div className='line'></div>
          <p>{description}</p>
       </AwardStyle>
    )
