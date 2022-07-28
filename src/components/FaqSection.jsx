@@ -4,10 +4,13 @@ import { About } from './styles'
 import Toggle from './Toggle'
 // Framer Motion
 import { AnimateSharedLayout } from 'framer-motion'
+import { scrollRevbeal } from '../Animation'
+import { useScroll } from './useScroll'
 
 const FaqSection = () => {
+   const [element, controls] = useScroll()
    return (
-      <Faq>
+      <Faq ref={element} variants={scrollRevbeal} animate={controls}>
          <h2>
             Any questions? <span>FAQ</span>
          </h2>
