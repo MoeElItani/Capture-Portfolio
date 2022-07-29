@@ -10,7 +10,7 @@ export const About = styled(motion.div)`
    padding: 5rem 10rem;
    color: #fff;
 `
-export const Description = styled.div`
+export const Description = styled(motion.div)`
    flex: 1;
    padding-right: 5rem;
    z-index: 2;
@@ -18,7 +18,7 @@ export const Description = styled.div`
       font-weight: lighter;
    }
 `
-export const Image = styled.div`
+export const Image = styled(motion.div)`
    z-index: 2;
    flex: 1;
    overflow: hidden;
@@ -28,6 +28,6 @@ export const Image = styled.div`
       object-fit: cover;
    }
 `
-export const Hide = styled.div`
+export const Hide = styled(motion.div)`
    overflow: hidden;
 `

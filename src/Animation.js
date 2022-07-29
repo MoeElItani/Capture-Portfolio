@@ -57,7 +57,7 @@ export const slider = {
       skew: '0deg',
       transition: {
          ease: 'easeOut',
-         duration: 0.6,
+         duration: 0.8,
       },
    },
 }
@@ -74,12 +74,34 @@ export const sliderContainer = {
 }
 
 export const scrollRevbeal = {
-   hidden: { opacity: 0, scale: 1.1, transition:{duration: 0.5} },
+   hidden: {
+      opacity: 0,
+      scale: 1.1,
+      transition: { duration: 0.5 },
+   },
    show: {
       opacity: 1,
       scale: 1,
       transition: {
          duration: 0.5,
+      },
+   },
+}
+
+export const swoopAdoop = {
+   hidden: {
+      x: '-30%',
+      skew: '45deg',
+      transition: {
+         duration: 0.75,
+      },
+   },
+   show: {
+      x: '0%',
+      skew: '0deg',
+      transition: {
+         ease: 'easeOut',
+         duration: 0.75,
       },
    },
 }

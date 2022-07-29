@@ -14,16 +14,19 @@ import {
    lineAnim,
    slider,
    sliderContainer,
+   swoopAdoop,
 } from '../Animation'
+import { useScroll } from '../components/useScroll'
 
 const OurWork = () => {
+   const [element, controls] = useScroll()
+   const [element2, controls2] = useScroll()
    return (
       <Work
          style={{ background: '#fff' }}
          variants={pageAnimation}
          initial='hidden'
          animate='show'
-         exit='exit'
       >
          <motion.div variants={sliderContainer}>
             <Frame1 variants={slider}></Frame1>
@@ -44,8 +47,13 @@ const OurWork = () => {
                </Hide>
             </Link>
          </Movie>
-         <Movie>
-            <motion.h2 variants={fade}>The Racer</motion.h2>
+         <Movie
+            variants={swoopAdoop}
+            ref={element}
+            animate={controls}
+            initial='hidden'
+         >
+            <motion.h2>The Racer</motion.h2>
             <motion.div variants={lineAnim} className='line' />
             <Link to='/work/the-racer'>
                <Hide>
@@ -57,7 +65,12 @@ const OurWork = () => {
                </Hide>
             </Link>
          </Movie>
-         <Movie>
+         <Movie
+            variants={swoopAdoop}
+            ref={element2}
+            animate={controls2}
+            initial='hidden'
+         >
             <motion.h2 variants={fade}>Good Times</motion.h2>
             <motion.div variants={lineAnim} className='line' />
             <Link to='/work/good-times'>
@@ -82,7 +95,7 @@ const Work = styled(motion.div)`
       padding: 1rem 0;
    }
 `
-const Movie = styled.div`
+const Movie = styled(motion.div)`
    padding-bottom: 10rem;
    color: #2a2a2a;
    .line {
@@ -96,7 +109,7 @@ const Movie = styled.div`
       object-fit: cover;
    }
 `
-const Hide = styled.div`
+const Hide = styled(motion.div)`
    overflow: hidden;
 `
 
