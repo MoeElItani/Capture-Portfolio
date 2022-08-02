@@ -9,6 +9,24 @@ export const About = styled(motion.div)`
    justify-content: space-between;
    padding: 5rem 10rem;
    color: #fff;
+   @media (max-width: 1300px) {
+      display: block;
+      padding: 2rem;
+      text-align: center;
+   }
+   @media (max-width: 1700px) {
+      h1,
+      h2,
+      span {
+         font-size: 2.5rem;
+      }
+      h3,
+      h4,
+      p,
+      button {
+         font-size: 1.5rem;
+      }
+   }
 `
 export const Description = styled(motion.div)`
    flex: 1;
@@ -16,6 +34,12 @@ export const Description = styled(motion.div)`
    z-index: 2;
    h2 {
       font-weight: lighter;
+   }
+   @media (max-width: 1300px) {
+      padding: 0;
+      button {
+         margin: 2rem 0 5rem 0;
+      }
    }
 `
 export const Image = styled(motion.div)`

@@ -71,6 +71,11 @@ const HeadLine = styled(motion.div)`
       height: 70vh;
       object-fit: cover;
    }
+   @media (max-width: 1500px) {
+      h2 {
+         width: 80%;
+      }
+   }
 `
 const Awards = styled(motion.div)`
    min-height: 80vh;
@@ -80,7 +85,7 @@ const Awards = styled(motion.div)`
    justify-content: space-around;
    @media (max-width: 1500px) {
       display: block;
-      margin: 2rem 2rem;
+      margin: 1rem;
    }
 `
 const AwardStyle = styled(motion.div)`

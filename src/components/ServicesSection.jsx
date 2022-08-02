@@ -8,15 +8,18 @@ import home2 from '../img/home2.png'
 // Styles
 import styled from 'styled-components'
 import { About, Description, Image } from './styles'
-import {useScroll} from './useScroll'
+import { useScroll } from './useScroll'
 
 import { scrollRevbeal } from '../Animation'
 
 const ServicesSection = () => {
    const [element, controls] = useScroll()
    return (
-
-      <Services variants={scrollRevbeal} animate={controls} ref={element}>
+      <Services
+         variants={scrollRevbeal}
+         animate={controls}
+         ref={element}
+      >
          <Description>
             <h2>
                High <span>Quality</span> Services
@@ -71,17 +74,29 @@ const Services = styled(About)`
 const Cards = styled.div`
    display: flex;
    flex-wrap: wrap;
+   @media (max-width: 1300px) {
+      justify-content: center;
+      p {
+         font-size: 1.3rem;
+      }
+   }
 `
 const Card = styled.div`
    flex-basis: 15rem;
    .icon {
       display: flex;
       align-items: center;
+
       h3 {
          margin-left: 1rem;
          background: #fff;
          color: #000;
          padding: 1rem;
+      }
+      @media (max-width: 1700px) {
+         h3 {
+            font-size: 0.95rem;
+         }
       }
    }
 `

@@ -68,10 +68,19 @@ const ContactStyle = styled(motion.div)`
    padding: 5rem 10rem;
    color: #353535;
    min-height: 90vh;
+   @media (max-width: 1300px) {
+      padding: 2rem;
+   }
 `
 const Title = styled(motion.div)`
-   margin-bottom: 4rem;
+   margin-bottom: 2.5rem;
    color: #000;
+   @media (max-width: 1300px) {
+      margin-top: 3rem;
+      h2 {
+         font-size: 2.5rem;
+      }
+   }
 `
 const Hide = styled(motion.div)`
    overflow: hidden;
@@ -90,6 +99,9 @@ const Social = styled(motion.div)`
       text-decoration: none;
       color: #000;
       font-size: 2rem;
+      @media (max-width: 1300px) {
+         font-size: 1.5rem;
+      }
    }
 `
 

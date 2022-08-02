@@ -80,6 +80,12 @@ const Faq = styled(About)`
       p {
          padding: 1rem 0;
       }
+      @media (max-width: 1300px) {
+      justify-content: center;
+      p {
+         font-size: 1.2rem;
+      }
+   }
    }
 `
 

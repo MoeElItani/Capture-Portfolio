@@ -5,6 +5,22 @@ const GlobalStyle = createGlobalStyle`
     margin:0;
     padding: 0;
     box-sizing: border-box;
+    @media (max-width: 1700px) {
+      h1,
+      h2,
+      span {
+         font-size: 2.5rem;
+      }
+      h3,
+      h4,
+      p{
+         font-size: 1.5rem;
+      }
+      button{
+        height: 3.9rem;
+        width: 12.5rem;
+      }
+  }
   }
   body{
     background: #1b1b1b;
