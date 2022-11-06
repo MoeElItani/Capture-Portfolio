@@ -30,10 +30,13 @@ const AboutSection = () => {
             </motion.div>
             <motion.p variants={fade}>
                Contact us for any photography or videography
-               ideas that you have. We have professionals with
-               amazing skills.
+               ideas that you have. We have professionals
+               with amazing skills.
             </motion.p>
-            <motion.button variants={fade}>
+            <motion.button
+               variants={fade}
+               style={{ width: 'max-content' }}
+            >
                Contact Us
             </motion.button>
          </Description>
