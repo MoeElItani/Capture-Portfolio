@@ -35,7 +35,7 @@ const AboutSection = () => {
             </motion.p>
             <motion.button
                variants={fade}
-               style={{ width: 'fit-content' }}
+               style={{ width: 'max-content' }}
             >
                Contact Us
             </motion.button>
